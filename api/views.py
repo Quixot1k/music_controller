@@ -1,11 +1,12 @@
+from django.http import JsonResponse
 from django.shortcuts import render
 from rest_framework import generics, status
-from .serializers import RoomSerializer, CreateRoomSerializer, UpdateRoomSerializer
-from .models import Room
-from rest_framework.views import APIView
 from rest_framework.response import Response
-from django.http import JsonResponse
+from rest_framework.views import APIView
 
+from .models import Room
+from .serializers import (CreateRoomSerializer, RoomSerializer,
+                          UpdateRoomSerializer)
 
 # Create your views here.
 
